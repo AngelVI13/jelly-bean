@@ -4,7 +4,6 @@ import (
 	"encoding"
 	"errors"
 	"fmt"
-	"log"
 	"os"
 	"path/filepath"
 	"reflect"
@@ -452,10 +451,6 @@ func parse(dests ...any) (*Parser, error) {
 		if dest, ok := dest.(Described); ok {
 			p.description = dest.Description()
 		}
-	}
-
-	for _, s := range p.cmd.specs {
-		log.Println(s.field.Name, s.help)
 	}
 
 	return &p, nil

@@ -1,6 +1,8 @@
 package main
 
 import (
+	"log"
+
 	jellybean "github.com/AngelVI13/jelly-bean"
 )
 
@@ -20,4 +22,17 @@ var args struct {
 
 func main() {
 	jellybean.MustParse(&args)
+
+	log.Println("UseRegex", args.UseRegex)
+	log.Println("FileType", args.FileType)
+
+	log.Println("Distance", args.Distance)
+
+	log.Println("LogFile", args.LogFile)
+	log.Println("OutFile", args.OutFile)
+	log.Println("WiFile", args.WiFile)
+
+	log.Println("Pattern", args.Pattern)
+	log.Println("Dir", args.Dir)
+
 }
